@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static '/Users/chandrumani/Desktop/ecomm/ec/app/static/app/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static '/Users/chandrumani/Desktop/ecomm/ec/app/static/app/css/owl.carousel.min.css' %}">
+   
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <title> Dairy  Products | {% block title %}{% endblock %}</title>
+   
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'app/images/product/Neel.png'%}" width="70" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
+          <li  class=" nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"  id="navbardrop" data-toggle="dropdown">Products
+
+            </a>
+         
+          <div class="dropdown-menu">
+<a class="dropdown-item" href="{% url 'category' 'ML' %}">Milks</a>
+<a class="dropdown-item" href="{% url 'category' 'CR' %}">Curd</a>
+<a class="dropdown-item" href="{% url 'category' 'MS' %}">MilkShake</a>
+<a class="dropdown-item" href="{% url 'category' 'LS' %}">Lassi</a>
+<a class="dropdown-item" href="{% url 'category' 'GH' %}">Ghee</a>
+<a class="dropdown-item" href="{% url 'category' 'PN' %}">Panner</a>
+<a class="dropdown-item" href="{% url 'category' 'CH' %}">Cheese</a>
+<a class="dropdown-item" href="{% url 'category' 'IC' %}">Ice-Creams</a>
+
+
+          </div>
+        </li>
+
+      
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+        
+        </ul>
+
+       
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+      <div class=" nav-item dropdown text-white">
+        <a class="nav-link dropdown-toggle" href="#"  id="navbardrop" data-toggle="dropdown">Chan
+
+        </a>
+     
+      <div class="dropdown-menu">
+<a class="dropdown-item" href="#about">Profile</a>
+<a class="dropdown-item" href="#contact">Orders</a>
+<a class="dropdown-item" href="#contact">Change password</a>
+<a class="dropdown-item" href="#contact">Log out</a>
+
+
+
+      </div>
+     
+    </div>
+    <div class="nav-item mx-2">
+      <a href="#" class="nav-link text-white">cart4</a>
+    </div>
+    <div class="nav-item mx-2">
+      <a href="#" class="nav-link text-white">wishlist4</a>
+    </div>
+    <div class="nav-item mx-2">
+      <a href="#" class="nav-link text-white">Login</a>
+    </div>
+    <div class="nav-item mx-2">
+      <a href="{% url 'customerregistration' %}" class="nav-link text-white">Registration</a>
+    </div>
+ 
+  
+
+
+    </ul>
+    </div>
+  </nav>
+  {% block banner-slider %} {% endblock banner-slider %}
+  {% block information %} {% endblock information %}
+  {% block main-content %} {% endblock main-content %}
+
+<footer class="container-fluid bg-success fixed-bottom text-center p-2 mt-5">
+
+  copyright : 2024 || Develope by : Channn
+
+</footer>
+
+  <script src="<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+ <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="{% static 'app/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'app/js/all.min.js'%}"></script>
+<script src="{% static 'app/js/myscript.js'%}"></script>
+
+  
+</body>
+</html> 
